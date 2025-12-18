@@ -1,7 +1,10 @@
 ### Metasploite and nmap WorkFlow
 
 1. Step-1: Search the alive devices
+
+```powershell
 `nmap -Sn 192.168.0.1/24`
+```
 
 2. Step-2: Scan the Port and their version
 `nmap -Pn -sV <targetIP>`
