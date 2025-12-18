@@ -86,25 +86,25 @@ e5d8870e5bdd26602cab8dbe07a942c8669e56d6:tryhackme
 **Dictionary attack:**
 
 ```powershell
-hashcat.exe -m 0 -a 0 hash.txt rockyou.txt
+hashcat -m 0 -a 0 hash.txt rockyou.txt
 ```
 
 **Brute-force 6 chars (letters + digits):**
 
 ```powershell
-hashcat.exe -m 0 -a 3 hash.txt ?l?l?l?l?d?d
+hashcat -m 0 -a 3 hash.txt ?l?l?l?l?d?d
 ```
 
 **Save results to file:**
 
 ```powershell
-hashcat.exe -m 160 -a 0 hash.txt rockyou.txt -o results.txt
+hashcat -m 160 -a 0 hash.txt rockyou.txt -o results.txt
 ```
 
 **Show already cracked hashes:**
 
 ```powershell
-hashcat.exe --show hash.txt
+hashcat --show hash.txt
 ```
 
 ---
@@ -113,6 +113,7 @@ hashcat.exe --show hash.txt
 
 * Check hash mode before cracking → prevents errors
 * Use optimized kernel `-O` for speed if password is short
+
 
 
 
