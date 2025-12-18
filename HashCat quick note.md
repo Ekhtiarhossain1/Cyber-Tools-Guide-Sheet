@@ -1,6 +1,6 @@
-
-
 ### **Command Structure**
+
+> For Linux `hascat` and for windows portables `./hashcat.exe`
 
 hashcat -m <hash-mode> -a <attack-mode> <hashfile> <wordlist/mask> [options]
 
@@ -111,5 +111,6 @@ hashcat.exe --show hash.txt
 
 * Check hash mode before cracking → prevents errors
 * Use optimized kernel `-O` for speed if password is short
+
 
 
