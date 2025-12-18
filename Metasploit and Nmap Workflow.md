@@ -3,18 +3,22 @@
 1. Step-1: Search the alive devices
 
 ```powershell
-`nmap -Sn 192.168.0.1/24`
+nmap -Sn 192.168.0.1/24
 ```
 
 2. Step-2: Scan the Port and their version
-`nmap -Pn -sV <targetIP>`
+
+```powershell
+nmap -Pn -sV <targetIP>
+```
 
 > [copy the backdated versions]
 
 3. Step-3: Open metasploite framework
-`msfconsole`
-
-4. Step-4: search that particular versions exploits [if version is exactly given]
+```powershell
+msfconsole
+```
+5. Step-4: search that particular versions exploits [if version is exactly given]
 `search vsftpd 2.3.4`
 
 > [exploits will be shown in a table called (matching madules)]
