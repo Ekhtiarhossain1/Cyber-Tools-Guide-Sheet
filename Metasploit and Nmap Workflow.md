@@ -95,21 +95,27 @@ exit
 [find the version]
 
 4. Step-4: search the version finding exploit
-`search smb_version`
+```powershell
+search smb_version
+```
 
 > [for http, http_version]
 
 5. Step-5: use the exploit
-
-`use auxiliary/scanner/smb/smb_version`
+```powershell
+use auxiliary/scanner/smb/smb_version
+```
 
 6. Step-6: Set target (Configuration)
-
-`set RHOSTS 192.168.0.101`
-`set RPORT 139`
+```powershell
+set RHOSTS 192.168.0.101
+set RPORT 139
+```
 
 7. Step-7: run the version finding exploitation
-`run`
+```powershell
+run
+```
 
 > [use the version and continue with the main exploitation]
 -------------------------------------------------------------------------------------------------------------------
@@ -120,13 +126,17 @@ exit
 [narrow down the list] [http running in apache server] [find php version of that apache server]
 
 -----in Metasploite
-`search type:exploit platform:unix`    [platworm:windows for windows]
+```powershell
+search type:exploit platform:unix
+```
+[platworm:windows for windows]
 
 [if still large list. use different tools to find exploits]
 
 ----in searchexploit
-
-`searchexploit apache 2.2.8 | grep php`
+```powershell
+searchexploit apache 2.2.8 | grep php
+```
 
 [small list should be shown]
 -------------------------------------------------------------------------------------------------------------------
