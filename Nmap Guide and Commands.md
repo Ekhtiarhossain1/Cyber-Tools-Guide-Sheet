@@ -1,23 +1,26 @@
 # NMAP Guide
 
 Step-1 (Check devices or Whose Alive)
-
+```powershell
 nmap -Sn 192.168.0.1/24
+```
 
 Step-2 (Scan that Particular Target)
-
+```powershell
 nmap <targetIP>
+```
 (get the open ports - 22,80,480)
 
 Step-2 (Scan with version)
-
+```powershell
 nmap -Pn -sV <targetIP>
+```
 
 Step-3 
-
+```powershell
 nmap -p 21,22,80 --script vuln <targetIP>
 nmap -p 21 -sV --script=ftp*,vuln <targetIP>
-
+```
 (All the CVE will be shown in details)
 
 
@@ -52,4 +55,5 @@ nmap -p 21 -sV --script=ftp*,vuln <targetIP>
 | `--exclude / --excludefile` | Skip Targets              | Exclude hosts from scan.                            | Use to skip known systems — `nmap 10.0.0.0/24 --exclude 10.0.0.5` |
 | `--script-timeout`          | Script Timeout            | Limits NSE script runtime.                          | Use to avoid hanging — `nmap --script-timeout 30s`                |
 | `--min-rate` / `--max-rate` | Packet Rate Control       | Control packets per second.                         | Use to manage speed — `nmap --min-rate 100 target`                |
+
 
