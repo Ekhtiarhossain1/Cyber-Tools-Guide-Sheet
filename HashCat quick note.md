@@ -2,11 +2,11 @@
 
 ### **Command Structure**
 
-hashcat.exe -m <hash-mode> -a <attack-mode> <hashfile> <wordlist/mask> [options]
+hashcat -m <hash-mode> -a <attack-mode> <hashfile> <wordlist/mask> [options]
 
 **Example:**
 
-.\hashcat.exe -m 160 -a 0 hash.txt rockyou.txt -o cracked.txt
+hashcat -m 160 -a 0 hash.txt rockyou.txt -o cracked.txt
 
 * `-m 160` → HMAC-SHA1 (key = salt)
 * `-a 0` → Dictionary attack
@@ -111,4 +111,5 @@ hashcat.exe --show hash.txt
 
 * Check hash mode before cracking → prevents errors
 * Use optimized kernel `-O` for speed if password is short
+
 
